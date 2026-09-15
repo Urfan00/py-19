@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Staff list{% endblock %}
+
+{% block css %}
+
+<link rel="stylesheet" href="{% static '' %}css/staff.css">
+
+{% endblock %}
+
+
+{% block body %}
+
+
+<h1>STAFF LIST</h1>
+
+<p>{{ isci }}</p>
+
+<p>{{ yas }}</p>
+
+{% if is_student %}
+    <p>telebedir</p>
+{% else %}
+    <p>telebe deyil</p>
+{% endif %}
+
+
+{% if ball >= 90 %}
+    <p>A</p>
+{% elif ball >= 80 %}
+    <p>B</p>
+{% elif ball >= 70 %}
+    <p>C</p>
+{% elif ball >= 60 %}
+    <p>D</p>
+{% else %}
+    <p>F</p>
+{% endif %}
+
+
+{% for dil in diller %}
+
+    <ul>
+        <li>{{ dil }}</li>
+    </ul>   
+
+{% endfor %}
+
+
+{% endblock %}

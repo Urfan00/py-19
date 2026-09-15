@@ -1,4 +1,0 @@
-
-
-print("PYTHON 19")
-
