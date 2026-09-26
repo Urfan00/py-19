@@ -22,5 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('py-19/', include('core.urls')),
     path('account/', include('account.urls')),
-    path('blog/', include('blog.urls'))
+    path('blog/', include('blog.urls')),
+    path('product/', include('product.urls')),
 ]

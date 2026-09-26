@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block title %}PRODUCT SEHIFESI{% endblock %}
+
+{% block body %}
+
+
+
+    {% for product in products %}
+
+        <h1>{{ product.name }}</h1>
+        <p>{{ product.price }}</p>
+
+        {% if product.discount %}
+            <p>ENDİRİM: {{ product.discount_price }}</p>
+        {% endif %}
+
+        <br><hr>
+    {% endfor %}
+
+
+{% endblock %}
